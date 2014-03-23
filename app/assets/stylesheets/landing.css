@@ -1,0 +1,29 @@
+.titulo-landing {
+  color: #840c24;
+  position: absolute;
+  text-align: center;
+  left: calc(50% - 105px);
+  top: -128px;
+  z-index: 123;
+  padding-bottom: 0;
+}
+
+
+#footer-landing a {
+  color: #840c24;
+}
+.intro-divider {
+  border-color: #840c24;
+}
+.intro-header {
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  color: #f8f8f8;
+  background: url('fondoscachemirer.jpg');
+  background-repeat:repeat;
+     filter:alpha(opacity=60); /* IE */
+    -moz-opacity:0.6; /* Mozilla */
+    opacity: 0.6; /* CSS3 */
+  text-align: center;
+  height: 500px;
+}

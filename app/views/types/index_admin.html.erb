@@ -1,0 +1,13 @@
+<h1>Tipos de creaciones</h1>
+  <tbody>
+    <% @types.each do |type| %>
+      <tr>
+        <%= render :partial => "type_admin", :locals => {:type => type} %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type', new_type_path %>

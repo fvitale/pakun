@@ -1,0 +1,4 @@
+.fancybox-nav.fancybox-next:hover,
+.fancybox-nav.fancybox-prev:hover {
+  background:transparent url('blank.gif');
+}

@@ -1,0 +1,17 @@
+div.item-box {
+  width: 25%;
+  height: 50px;
+  display: block;
+  border: solid;
+  border-style: outset;
+  -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+}
+.item-box {
+  opacity:0.4;
+}
+.item-link {
+  text-align: center;
+  color: #FFF;
+}
