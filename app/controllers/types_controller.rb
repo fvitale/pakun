@@ -1,15 +1,26 @@
 class TypesController < ApplicationController
   before_action :set_type, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /types
   # GET /types.json
   def index
     @types = Type.all
+    if user_signed_in?
+      render "index_admin"
+    else
+      render "index"
+    end
   end
 
   # GET /types/1
   # GET /types/1.json
   def show
+    if user_signed_in?
+      render "show_admin"
+    else
+      render "show"
+    end
   end
 
   # GET /types/new
@@ -62,7 +73,12 @@ class TypesController < ApplicationController
   end
 
   def items_by_type
-    @items = Item.where("id_type" => params[:id])
+    @type = Type.find params[:id]
+    @items = []
+    Item.where("id_type" => params[:id]).each do |item|
+      principal_image = Image.where(:id_item => item.id, :principal => true).take
+      @items << { :item => item, :principal_image => principal_image }
+    end
   end
 
   private

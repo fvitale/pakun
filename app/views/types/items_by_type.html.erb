@@ -1,29 +1,14 @@
-<h1>Listing items</h1>
+<%= stylesheet_link_tag "items_by_type" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Id type</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h1>Creaciones en <%= @type.name %></h1>
 
-  <tbody>
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.id_type %></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <a class="item-link" href="/items/<%=item[:item].id%>">
+        <div class="item-box" style="background-image:url(<%= item[:principal_image].location %>);">
+          <%= item[:item].name %>
+          <%= item[:item].description %>
+        </div>
+      </a>
     <% end %>
-  </tbody>
-</table>
 
 <br>

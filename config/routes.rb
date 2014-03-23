@@ -5,7 +5,8 @@ Pakun::Application.routes.draw do
   get "type/:id/items" => "types#items_by_type"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
-  root "pages#index"
+  get "index" => "pages#index"
+  root "pages#landing"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

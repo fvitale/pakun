@@ -10,6 +10,12 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @images = Image.where(id_item: params[:id])
+    if user_signed_in?
+      render "show_admin"
+    else
+      render "show"
+    end
   end
 
   # GET /items/new
