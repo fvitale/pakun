@@ -1,0 +1,39 @@
+div#wrapper {
+  background: url('back-alpha06.png');
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+@font-face {
+  font-family: hanging;
+  src: url('HangingByaThread.ttf');
+}
+* {
+  font-family:hanging !important;
+}
+body {
+  height: 200px;
+}
+#wrapper h1 {
+  font-size: 68px;
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.container-fluid p {
+  font-size: 35px;
+  line-height: 45px;
+  margin-bottom: 45px;
+  margin-top: 45px;
+  font-weight: bold;
+}
+.in-text-link:hover {
+  background: none;
+  color: gray;
+  text-decoration: none;
+}
+.in-text-link {
+  color: blue;
+}

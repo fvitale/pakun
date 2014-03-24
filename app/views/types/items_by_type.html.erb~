@@ -14,7 +14,7 @@
             <a class="item-link" href="/items/<%=item[:item].id%>"><%= item[:item].name %><small class="muted"> creada el <%= item[:item].created_at.strftime("%d %b. %Y") %></small></a>
             <div class="principal-creation col-xs-3">
 
-              <a class="fancybox thumbnail" rel="group" href="/items/<%=item[:item].id%>">
+              <a class="fancybox thumbnail" rel="group" href="/items/<%=item[:item].id%>"><%debugger%>
                 <img src="<%= item[:principal_image].location %>" alt="">
               </a>
             </div>

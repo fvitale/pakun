@@ -1,11 +1,12 @@
+<div class="container-fluid">
 <h1>Tipos de creaciones</h1>
-  <tbody>
+  <table>
+    <tbody>
     <% @types.each do |type| %>
       <tr>
           <%= render :partial => "type", :locals => {:type => type} %>
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
+  </table>
+</div>

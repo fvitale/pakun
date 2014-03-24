@@ -10,7 +10,5 @@
 <body>
   <div id="wrapper" >
   <%= render "pages/sidebar" %>
-  <%= yield %>
-  </div>
 </body>
 </html>

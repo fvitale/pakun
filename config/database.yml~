@@ -8,7 +8,7 @@ development:
   encoding: unicode
   database: pakun_development
   pool: 5
-  username: fernando
+  username: pakun
   password: p4k1n
 
 # Warning: The database defined as "test" will be erased and
@@ -19,13 +19,13 @@ test:
   encoding: unicode
   database: pakun_test
   pool: 5
-  username: fernando
+  username: pakun
   password: p4k1n
 
 production:
   adapter: postgresql
   database: pakun_production
   pool: 5
-  username: fernando
+  username: pakun
   password: p4k1n
   timeout: 5000

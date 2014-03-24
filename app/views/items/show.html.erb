@@ -4,24 +4,23 @@
 <%= javascript_include_tag "items" %>
 
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
 
-<p>
-  <strong><%= @item.name %></strong>
-</p>
+  <h1><%= @item.name %></h1>
 
-<p>
-  <%= @item.description %>
-</p>
+  <p>
+    <%= @item.description %>
+  </p>
 
-<div class="container">
-    <div class="row">
-      <% @images.each do |image| %>
-        <div class="col-xs-3">
-          <a class="fancybox thumbnail" rel="group" href="<%= image.location %>">
-            <img src="<%= image.location %>" alt="">
-          </a>
-        </div>
-      <% end %>
+  <div class="container">
+      <div class="row">
+        <% @images.each do |image| %>
+          <div class="col-xs-3">
+            <a class="fancybox thumbnail" rel="group" href="<%= image.location %>">
+              <img src="<%= image.location %>" alt="">
+            </a>
+          </div>
+        <% end %>
+    </div>
   </div>
 </div>
-
